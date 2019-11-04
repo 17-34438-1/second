@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Customer list</title>
+	<link rel="stylesheet" type="text/css" href="/assets/style.css">
+	<link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+<div class="header">
+	<h1>Book List</h1>
+
+	<a href="/home">Back</a> |
+	<a href="/logout">logout</a>
+ </div>
+<br><br>
+	<table border="1">
+	<div class="input-group">
+		<tr>
+			<td>Id</td>
+			<td>AuthorName</td>
+			<td>BookType</td>
+			<td>Username</td>
+			<td>Password</td>
+			<td>Type</td>
+		</tr>
+		</div>
+		
+	<% for(var i=0; i< List.length; i++){ %>
+		<div class="input-group">
+		<tr>
+			<td><%= List[i].id %></td>
+			<td><%= List[i].authorname %></td>
+			<td><%= List[i].booktype %></td>
+			<td><%= List[i].username %></td>
+			<td><%= List[i].password %></td>
+			<td><%= List[i].type %></td>
+			
+		</tr>
+</div>
+	<% } %>
+	
+	</table>
+</body>
+</html>

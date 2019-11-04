@@ -1,0 +1,39 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+	<title>test</title>
+	<link rel="stylesheet" type="text/css" href="/assets/buity.css">
+</head>
+<body>
+	<h1> Delete Page</h1>  
+	<a href="/homeSeller">Back</a> |
+	<a href="/logout">logout</a>
+
+	<table width="300px" >
+		<tr>
+			<td>Title</td>
+			<td>:</td>
+			<td><%=title%></td>
+		</tr>
+		<tr>
+			<td>Author</td>
+			<td>:</td>
+			<td><%=author%></td>
+		</tr>
+		<tr>
+			<td>Type</td>
+			<td width="2%">:</td>
+			<td><%=price%></td>
+		</tr>
+	</table>
+	<br><br>
+	<b>Are you sure? This can't be undone of you click confirm!</b>
+
+	<form method="post">
+			<input type="hidden" name="uid" value="<%=id%>"/>
+			<input type="submit" name="delete" value="Confirm"/>
+	</form>
+
+</body>
+</html>

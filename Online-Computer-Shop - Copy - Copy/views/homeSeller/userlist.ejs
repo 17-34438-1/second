@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>User List</title>
+	<link rel="stylesheet" type="text/css" href="/assets/style.css">
+</head>
+<body>
+	<h1> User List</h1>  
+	<a href="/homeSeller">Back</a> |
+	<a href="/logout">logout</a>
+
+	<br><br>
+
+	<table border="1" width="400px" >
+		<tr>
+			<th>Id</th>
+			<th>Name</th>
+			<th>Type</th>
+			<th>Action</th>
+		</tr>
+		<% for(var i=0; i < uList.length; i++){ %>
+		<tr>
+			<td><%= uList[i].id %></td>
+			<td><%= uList[i].username %></td>
+			<td><%= uList[i].type %></td>
+			<td>
+				<a href="/home/edit/<%=uList[i].id%>"> EDIT</a> |
+				<a href="/home/delete/<%=uList[i].id%>"> DELETE</a>
+			</td>
+		</tr>
+		<% } %>
+	</table>
+</body>
+</html>

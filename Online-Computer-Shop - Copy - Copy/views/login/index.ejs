@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>login page</title>
+	<link rel="stylesheet" type="text/css" href="/assets/style.css">
+	<link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+<div class="header">
+	<h1>Login</h1>
+</div>
+	<form method="post" onsubmit="return validate()">
+		<table>
+		<div class="input-group">
+			<tr>
+				<td>Username</td>
+				<td><input type="text" name="username" required="required" id="username"></td>
+			</tr>
+			</div>
+			<div>
+			<tr>
+				<td>Password</td>
+				<td><input type="password" name="password" required="required" id="password"></td>
+			</tr>
+			</div>
+			<div>
+			<tr>
+				<td><input type="submit" name="submit" value="Submit"></td>
+				<td></td>
+			</tr>
+			</div>
+		</table>
+		<div class="input-group">
+	<p>No Account please go to <a href="/registration">Registration</a></p>
+</div>
+	</form>
+
+	<script type="text/javascript">
+		function validate(){
+			var username = document.geteElementById('username');
+			var password = document.geteElementById('password');
+			if(username.value.trim()=="" || password.value.trim()=="")
+			{
+				document.alert("Username/password can not be empty");
+				return false;
+			}
+			else
+				return true;
+		}
+	</script>
+</body>
+</html>

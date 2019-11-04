@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Registration</title>
+</head>
+<body>
+	<h1>Registration</h1>
+
+<br><br>
+
+<form method="post" onsubmit="return validate()">
+	<table border="0">
+		<tr>
+			<td>Name</td>
+			<td><input type="text" name="name" id="name">
+				<label id="errname" style="visibility: hidden;">Invalid</label>
+			</td>
+			</tr>
+		<tr>
+			<td>Username</td>
+			<td><input type="text" name="username"></td>
+		</tr>
+		<tr>
+			<td>Password</td>
+			<td><input type="password" name="password"></td>
+		</tr>
+		<tr>
+			<td>Email</td>
+			<td><input type="text" name="contact"></td>
+		</tr>
+		<tr>
+			<td>User Type</td>
+			<td><input type="text" name="contact"></td>
+		</tr>
+		<tr>
+			<td></td>
+			<td><input type="submit" name="submit" value="submit"></td>
+		</tr>
+	</table>
+</form>
+
+<script type="text/javascript">
+	function validate(){
+		var name = document.getElementById("name");
+	if(name.value.trim()<5)
+	{
+		document.getElementById("errname").style.visibility="visible";
+		return false;
+	}
+	}
+</script>
+
+</body>
+</html>

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Book List</title>
+	<link rel="stylesheet" type="text/css" href="/assets/style.css">
+</head>
+<body>
+	<h1> Book List</h1>  
+	<a href="/home">Back</a> |
+	<a href="/logout">logout</a>
+
+	<br><br>
+
+	<table border="1" width="400px" >
+		<tr>
+			<th>Id</th>
+			<th>Title</th>
+			<th>Author</th>
+			<th>price</th>
+		</tr>
+		<% for(var i=0; i < uLst.length; i++){ %>
+		<tr>
+			<td><%= uLst[i].id %></td>
+			<td><%= uLst[i].title %></td>
+						<td><%= uLst[i].author %></td>
+
+			<td><%= uLst[i].price %></td>
+			<td>
+				<a href="/home/editbook/<%=uLst[i].id%>"> EDIT</a> |
+				<a href="/home/deletebook/<%=uLst[i].id%>"> DELETE</a>
+			</td>
+		</tr>
+		<% } %>
+	</table>
+</body>
+</html>

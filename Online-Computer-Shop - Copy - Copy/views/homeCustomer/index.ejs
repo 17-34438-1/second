@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Home</title>
+</head>
+<body>
+	<h1>Home</h1>
+	<a href="/logout">logout</a>
+
+<br><br>
+	<table border="1">
+	
+		<tr>
+			<% for(var i=0; i< product.length; i++){ %>
+			<td width="50px">
+				<a href = ""><%=product[i].booktype%></a>
+			</td>
+				<% } %>
+		</tr>
+	</table>
+</body>
+</html>
+

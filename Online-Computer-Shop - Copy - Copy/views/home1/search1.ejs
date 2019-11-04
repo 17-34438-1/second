@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<script type="text/javascript">
+$(document).ready(() =>{
+	$('#key').keyup(() => {
+		
+		//console.log('You received some data!', data);
+		//alert('test');
+		$.ajax({
+			url: '/home1/search1/'+$('#key').val(),
+			type: 'GET',
+			dataType : 'json',
+			success: (data) => {
+				console.log(data.length);
+				
+				var table= "<table><tr><td>Id</td><td>Title</td><td>Author</td><td>Price</td>"
+				for(var i=0; i<data.length; i++){
+					table += "<tr><td>"+data[i].id+"</td>"+
+								"<td>"+data[i].title+"</td>"+
+								"<td>"+data[i].author+"</td>"+
+								"<td>"+data[i].price+"</td></tr>";
+				}
+				
+				table += "</table>";
+				
+				$('#mytable').html(table);
+			}
+		});
+    });
+
+});
+</script>
+
+<style>
+table {
+  font-family: arial, sans-serif;
+  border-collapse: collapse;
+  width: 100%;
+}
+
+td, th {
+  border: 1px solid #dddddd;
+  text-align: left;
+  padding: 8px;
+}
+
+tr:nth-child(even) {
+  background-color: #dddddd;
+}
+</style>
+</head>
+<body>
+<h1> SearchBooks</h1>  
+	<a href="/home1">Back</a> |
+	<a href="/logout">logout</a>
+
+<input  type="text" placeholder="Search.." id="key">
+<br><br>
+
+<div id="mytable">
+
+</div>
+  
+
+</body>
+</html>

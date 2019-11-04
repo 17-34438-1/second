@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>User List</title>
+	<link rel="stylesheet" type="text/css" href="/assets/style.css">
+</head>
+<body>
+	<h1> User List</h1>  
+	<a href="/homeAdmin">Back</a> |
+	<a href="/logout">logout</a>
+
+	<br><br>
+
+	<table border="1" width="400px" >
+		<tr>
+			<th>Id</th>
+			<th>Name</th>
+			<th>Username</th>
+			<th>Password</th>
+			<th>Email</th>
+			<th>Type</th>
+		</tr>
+		<% for(var i=0; i < uLit.length; i++){ %>
+		<tr>
+			<td><%= uLit[i].id %></td>
+			<td><%= uLit[i].name %></td>
+			<td><%= uLit[i].username %></td>
+			<td><%= uLit[i].password %></td>
+			<td><%= uLit[i].email %></td>
+			<td><%= uLit[i].utype %></td>
+			<td>
+				<a href="/homeAdmin/edit/<%=uLit[i].id%>"> EDIT</a> |
+				<a href="/homeAdmin/delete/<%=uLit[i].id%>"> DELETE</a>
+			</td>
+		</tr>
+		<% } %>
+	</table>
+</body>
+</html>

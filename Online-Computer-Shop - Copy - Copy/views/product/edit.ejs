@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>product edit</title>
+</head>
+<body>
+	<h1>Edit Product</h1>
+
+	<a href="/homeAdmin">Back</a> |
+	<a href="/logout">logout</a>
+
+<br><br>
+
+<form method="post">
+	<table border="0">
+		<tr>
+			<td>AuthorName</td>
+			<td><input type="text" name="authorname" value="<%=product.authorname%>"></td>
+		</tr>
+		<tr>
+			<td>BookType</td>
+			<td><input type="text" name="booktype" value="<%=product.booktype%>"></td>
+		</tr>
+		<tr>
+			<td>Price</td>
+			<td><input type="text" name="price" value="<%=product.price%>"></td>
+		</tr>
+		<tr>
+			<td>Pages</td>
+			<td><input type="text" name="pages" value="<%=product.pages%>"></td>
+		</tr>
+		<tr>
+			<td></td>
+			<td><input type="submit" name="submit" value="Save"></td>
+		</tr>
+	</table>
+</form>
+</body>
+</html>

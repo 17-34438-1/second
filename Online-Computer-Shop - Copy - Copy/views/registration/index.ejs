@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Registration</title>
+	<link rel="stylesheet" type="text/css" href="/assets/style.css">
+	<link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+<div class="header">
+	<h1>Registration</h1>
+
+	<a href="/login">Login</a>
+ </div>
+<br><br>
+
+<form method="post">
+	<table border="0">
+	<div class="input-group">
+	 
+		<tr>
+			<td>Name</td>
+			<td><input type="text" name="name" id="name" required="required">
+				<label id="errname" style="visibility: hidden;">Invalid</label>
+			</td>
+			</tr>
+			</div>
+				<div class="input-group">
+	 
+		<tr>
+			<td>Username</td>
+			<td><input type="text" name="username" required="required"></td>
+		</tr>
+		</div>
+			<div class="input-group">
+	 
+		<tr>
+			<td>Password</td>
+			<td><input type="password" name="password" required="required"></td>
+		</tr>
+		</div>
+			<div class="input-group">
+	
+		<tr>
+			<td>Email</td>
+			<td><input type="text" name="email" required="required"></td>
+		</tr>
+		</div>
+			<div class="input-group">
+	
+		<tr>
+			<td>User Type</td>
+			<td><input type="text" name="utype" placeholder="0 for admin and 1 for Customer" required="required">
+			</td>
+		</tr>
+		</div>
+		<tr>
+			<td></td>
+			<td><input type="submit" name="submit" value="submit"></td>
+		</tr>
+	</table>
+</form>
+
+<!-- <script type="text/javascript">
+	function validate(){
+		var name = document.getElementById("name");
+	if(name.value.trim() == " ")
+	{
+		document.getElementById("errname").style.visibility="visible";
+		return false;
+	}
+}
+</script> -->
+
+</body>
+</html>

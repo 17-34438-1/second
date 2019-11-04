@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>test</title>
+	<link rel="stylesheet" type="text/css" href="/assets/very.css">
+</head>
+<body>
+	<h1> Edit Page</h1>  
+	<a href="/homeSeller">Back</a> |
+	<a href="/logout">logout</a>
+
+<br>
+	<form method="post">
+	<table width="300px" >
+		<tr>
+			<td width="35%">Title</td>
+			<td width="2%">:</td>
+			<td><input type="text" name="utitle" value="<%=title%>"></td>
+		</tr>
+		<tr>
+			<td>Author</td>
+			<td width="2%">:</td>
+			<td><input type="text" name="author" value="<%=author%>"></td>
+		</tr>
+		<tr>
+			<td>Price</td>
+			<td width="2%">:</td>
+			<td><input type="number" name="price" value="<%=price%>"></td>
+		</tr>
+		<tr>
+			<td></td>
+			<td width="2%"></td>
+			<td><input type="submit" name="update" value="Update"></td>
+		</tr>
+	</table>
+	</form>
+</body>
+</html>
+			
